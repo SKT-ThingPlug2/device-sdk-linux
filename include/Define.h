@@ -20,7 +20,7 @@
 #define RPC_DOWNLOAD                "tp_download"
 #define RPC_SOFTWARE_INSTALL        "tp_install"
 #define RPC_SOFTWARE_REINSTALL      "tp_reinstall"
-#define RPC_SOFTWARE_REUNINSTALL    "tp_reuninstall"
+#define RPC_SOFTWARE_UNINSTALL      "tp_uninstall"
 #define RPC_SOFTWARE_UPDATE         "tp_update"
 #define RPC_FIRMWARE_UPGRADE        "tp_fwupgrade"
 #define RPC_CLOCK_SYNC              "tp_clocksync"
