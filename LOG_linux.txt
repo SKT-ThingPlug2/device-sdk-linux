@@ -1,101 +1,92 @@
-[2018-01-29 02:06:34] [MA/MA.c] [626] [INFO]: ThingPlug_Simple_SDK
-[2018-01-29 02:06:34] [MA/MA.c] [598] [INFO]: tpMQTTSetCallbacks result : 0
-[2018-01-29 02:06:34] [src/simple/Simple.c] [282] [INFO]: tpSimpleInitialize
+[2018-02-09 02:13:56] [MA/MA.c] [635] [INFO]: ThingPlug_Simple_SDK
+[2018-02-09 02:13:56] [MA/MA.c] [607] [INFO]: tpMQTTSetCallbacks result : 0
+[2018-02-09 02:13:56] [src/simple/Simple.c] [282] [INFO]: tpSimpleInitialize
 serviceID : myservice, deviceID: mydevice
-[2018-01-29 02:06:34] [MA/MA.c] [601] [INFO]: tpSimpleInitialize : 0
-[2018-01-29 02:06:34] [MA/MA.c] [606] [INFO]: client id : mydevice_84EB18E1E955
-[2018-01-29 02:06:34] [src/net/MQTTClient.c] [162] [INFO]: MQTTAsyncCreate()
-[2018-01-29 02:06:34] [MA/MA.c] [621] [INFO]: tpSDKCreate result : 0
-
-[2018-01-29 02:06:35] [MA/MA.c] [72] [INFO]: MQTTConnected result : 0
-[2018-01-29 02:06:35] [MA/MA.c] [79] [INFO]: CONNECTION_STATUS : 2
-[2018-01-29 02:06:35] [src/net/MQTTClient.c] [54] [INFO]: subscribed topic : v1/dev/myservice/mydevice/down
-[2018-01-29 02:06:35] [src/net/MQTTClient.c] [66] [INFO]: on connected : connect onSuccess called
-[2018-01-29 02:06:35] [MA/MA.c] [83] [INFO]: MQTTSubscribed result : 0
-[2018-01-29 02:06:35] [src/simple/Simple.c] [164] [INFO]: tpSimpleAttribute
+[2018-02-09 02:13:56] [MA/MA.c] [610] [INFO]: tpSimpleInitialize : 0
+[2018-02-09 02:13:56] [MA/MA.c] [615] [INFO]: client id : mydevice_84EB18E1E955
+[2018-02-09 02:13:56] [src/net/MQTTClient.c] [162] [INFO]: MQTTAsyncCreate()
+[2018-02-09 02:13:56] [MA/MA.c] [630] [INFO]: tpSDKCreate result : 0
+[2018-02-09 02:13:57] [MA/MA.c] [72] [INFO]: MQTTConnected result : 0
+[2018-02-09 02:13:57] [MA/MA.c] [79] [INFO]: CONNECTION_STATUS : 2
+[2018-02-09 02:13:57] [src/net/MQTTClient.c] [54] [INFO]: subscribed topic : v1/dev/myservice/mydevice/down
+[2018-02-09 02:13:57] [src/net/MQTTClient.c] [66] [INFO]: on connected : connect onSuccess called
+[2018-02-09 02:13:57] [MA/MA.c] [83] [INFO]: MQTTSubscribed result : 0
+[2018-02-09 02:13:57] [src/simple/Simple.c] [164] [INFO]: tpSimpleAttribute
 topic : v1/dev/myservice/mydevice/attribute
 {
-	"sysAvailableMemory":	127877120,
+	"sysAvailableMemory":	123052032,
 	"sysFirmwareVersion":	"2.0.0",
 	"sysHardwareVersion":	"1.0",
 	"sysSerialNumber":	"710DJC5I10000290",
 	"sysErrorCode":	0,
 	"sysNetworkType":	"ethernet",
 	"sysDeviceIpAddress":	"192.168.0.5",
-	"sysThingPlugIpAddress":	"0.0.0.0",
+	"sysThingPlugIpAddress":	"xxx.xxx.xxx.xxx",
 	"sysLocationLatitude":	37.380257,
 	"sysLocationLongitude":	127.115479,
 	"act7colorLed":	0
 }
-[2018-01-29 02:06:44] [src/simple/Simple.c] [129] [INFO]: tpSimpleTelemetry
+[2018-02-09 02:14:06] [src/simple/Simple.c] [129] [INFO]: tpSimpleTelemetry
 topic : v1/dev/myservice/mydevice/telemetry
 {
-	"temp1":	21.07,
-	"humi1":	47,
-	"light1":	207,
-	"ts":	1517191604
+	"temp1":	37.44,
+	"humi1":	44,
+	"light1":	244,
+	"ts":	1518142446
 }
-[2018-01-29 02:07:24] [src/simple/Simple.c] [129] [INFO]: tpSimpleTelemetry
+[2018-02-09 02:14:16] [src/simple/Simple.c] [129] [INFO]: tpSimpleTelemetry
 topic : v1/dev/myservice/mydevice/telemetry
 {
-	"temp1":	21.07,
-	"humi1":	47,
-	"light1":	207,
-	"ts":	1517191644
+	"temp1":	61.48,
+	"humi1":	48,
+	"light1":	248,
+	"ts":	1518142456
 }
-[2018-01-29 02:07:25] [MA/MA.c] [101] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
-[2018-01-29 02:07:25] [MA/MA.c] [108] [INFO]: payload : {"deviceId":"123-456-789","cmdId":113647879,"cmd":"setAttribute","attribute":{"act7colorLed":4}}
-[2018-01-29 02:07:25] [MA/MA.c] [246] [INFO]: act7colorLed : 4, 113647879
-[2018-01-29 02:07:25] [src/simple/Simple.c] [164] [INFO]: tpSimpleAttribute
+[2018-02-09 02:14:26] [src/simple/Simple.c] [129] [INFO]: tpSimpleTelemetry
+topic : v1/dev/myservice/mydevice/telemetry
+{
+	"temp1":	28.16,
+	"humi1":	46,
+	"light1":	216,
+	"ts":	1518142466
+}
+[2018-02-09 02:14:31] [MA/MA.c] [101] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
+[2018-02-09 02:14:31] [MA/MA.c] [108] [INFO]: payload : {"deviceId":"123-456-789","cmdId":46461466,"cmd":"setAttribute","attribute":{"act7colorLed":1}}
+[2018-02-09 02:14:31] [MA/MA.c] [255] [INFO]: act7colorLed : 1, 46461466
+[2018-02-09 02:14:31] [src/simple/Simple.c] [164] [INFO]: tpSimpleAttribute
 topic : v1/dev/myservice/mydevice/attribute
 {
-	"act7colorLed":	4
+	"act7colorLed":	1
 }
-[2018-01-29 02:07:26] [MA/MA.c] [101] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
-[2018-01-29 02:07:26] [MA/MA.c] [108] [INFO]: payload : {"serviceName":"myservice","deviceName":"mydevice","cmdId":16,"cmd":"jsonRpc","rpcMode":"twoway","rpcReq":{"jsonrpc":"2.0","method":"tp_user","params":[{"act7colorLed":3}],"id":333630329}}
-[2018-01-29 02:07:26] [MA/MA.c] [186] [INFO]: RPC_USER
-[2018-01-29 02:07:26] [MA/MA.c] [192] [INFO]: 
-rpc : 2.0,
-id : 333630329,
-control : 3
-[2018-01-29 02:07:26] [src/simple/Simple.c] [371] [INFO]: tpSimpleRawResult
-topic : v1/dev/myservice/mydevice/up
-{"cmd":"jsonRpc","cmdId":1,"result":"success","rpcRsp":{"jsonrpc":"2.0","id":333630329,"result":{"act7colorLed":3}}}
-[2018-01-29 02:07:33] [MA/MA.c] [101] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
-[2018-01-29 02:07:33] [MA/MA.c] [108] [INFO]: payload : {"serviceName":"myservice","deviceName":"mydevice","cmdId":-9999,"cmd":"jsonRpc","rpcMode":"twoway","rpcReq":{"jsonrpc":"2.0","method":"tp_remote","params":["AT+CPSMS=1,,,01000001,00100011"],"id":333630330}}
-[2018-01-29 02:07:33] [src/simple/Simple.c] [217] [INFO]: tpSimpleResult
-topic : v1/dev/myservice/mydevice/up
+[2018-02-09 02:14:33] [MA/MA.c] [101] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
+[2018-02-09 02:14:33] [MA/MA.c] [108] [INFO]: payload : {"deviceId":"123-456-789","cmdId":304332823,"cmd":"setAttribute","attribute":{"act7colorLed":9}}
+[2018-02-09 02:14:33] [MA/MA.c] [255] [INFO]: act7colorLed : 9, 304332823
+[2018-02-09 02:14:33] [src/simple/Simple.c] [164] [INFO]: tpSimpleAttribute
+topic : v1/dev/myservice/mydevice/attribute
 {
-	"cmd":	"jsonRpc",
-	"cmdId":	1,
-	"result":	"success",
-	"rpcRsp":	{
-		"jsonrpc":	"2.0",
-		"id":	333630330
-	}
+	"act7colorLed":	1
 }
-[2018-01-29 02:07:33] [MA/MA.c] [101] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
-[2018-01-29 02:07:33] [MA/MA.c] [108] [INFO]: payload : {"result":"fail","errorCode":102,"errorReason":"invalid command"}
-[2018-01-29 02:07:34] [src/simple/Simple.c] [129] [INFO]: tpSimpleTelemetry
+[2018-02-09 02:14:34] [MA/MA.c] [101] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
+[2018-02-09 02:14:34] [MA/MA.c] [108] [INFO]: payload : {"serviceName":"myservice","deviceName":"mydevice","cmdId":4,"cmd":"jsonRpc","rpcReq":{"jsonrpc":"2.0","method":"tp_user","params":[{"act7colorLed":3}],"id":1007162283}}
+[2018-02-09 02:14:34] [MA/MA.c] [186] [INFO]: RPC_USER
+[2018-02-09 02:14:34] [MA/MA.c] [192] [INFO]: 
+rpc : 2.0,
+id : 1007162283,
+control : 3
+[2018-02-09 02:14:34] [src/simple/Simple.c] [371] [INFO]: tpSimpleRawResult
+topic : v1/dev/myservice/mydevice/up
+{"cmd":"jsonRpc","cmdId":1,"result":"success","rpcRsp":{"jsonrpc":"2.0","id":1007162283,"result":{"act7colorLed":3}}}
+[2018-02-09 02:14:36] [src/simple/Simple.c] [129] [INFO]: tpSimpleTelemetry
 topic : v1/dev/myservice/mydevice/telemetry
 {
-	"temp1":	43.71,
+	"temp1":	38.21,
 	"humi1":	41,
 	"light1":	221,
-	"ts":	1517191654
+	"ts":	1518142476
 }
-[2018-01-29 02:07:44] [src/simple/Simple.c] [129] [INFO]: tpSimpleTelemetry
-topic : v1/dev/myservice/mydevice/telemetry
-{
-	"temp1":	53.03,
-	"humi1":	43,
-	"light1":	203,
-	"ts":	1517191664
-}
-[2018-01-29 02:10:18] [MA/MA.c] [101] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
-[2018-01-29 02:10:18] [MA/MA.c] [108] [INFO]: payload : {"serviceName":"myservice","deviceName":"mydevice","cmdId":-9999,"cmd":"jsonRpc","rpcMode":"twoway","rpcReq":{"jsonrpc":"2.0","method":"tp_fwupgrade","params":["http://0.0.0.0:80/portal/services/myservice/firmwares/6/43a79823-53b1-4405-958b-6da264814c7e/download","http://0.0.0.0:80/portal/firmware-upgrade-devices/32/43a79823-53b1-4405-958b-6da264814c7e"],"id":333630331}}
-[2018-01-29 02:10:18] [MA/MA.c] [173] [INFO]: RPC_FIRMWARE_UPGRADE
-[2018-01-29 02:10:18] [src/simple/Simple.c] [217] [INFO]: tpSimpleResult
+[2018-02-09 02:15:22] [MA/MA.c] [101] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
+[2018-02-09 02:15:22] [MA/MA.c] [108] [INFO]: payload : {"serviceName":"myservice","deviceName":"mydevice","cmdId":-9999,"cmd":"jsonRpc","rpcReq":{"jsonrpc":"2.0","method":"tp_remote","params":[["AT+CPSMS=1,,,01000001,00100011"]],"id":1007162284}}
+[2018-02-09 02:15:22] [src/simple/Simple.c] [217] [INFO]: tpSimpleResult
 topic : v1/dev/myservice/mydevice/up
 {
 	"cmd":	"jsonRpc",
@@ -103,16 +94,59 @@ topic : v1/dev/myservice/mydevice/up
 	"result":	"success",
 	"rpcRsp":	{
 		"jsonrpc":	"2.0",
-		"id":	333630331
+		"id":	1007162284,
+		"result":	{
+			"status":	"SUCCESS"
+		}
 	}
 }
-[2018-01-29 02:10:18] [MA/MA.c] [101] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
-[2018-01-29 02:10:18] [MA/MA.c] [108] [INFO]: payload : {"result":"fail","errorCode":102,"errorReason":"invalid command"}
-[2018-01-29 02:10:24] [src/simple/Simple.c] [129] [INFO]: tpSimpleTelemetry
+[2018-02-09 02:15:26] [src/simple/Simple.c] [129] [INFO]: tpSimpleTelemetry
 topic : v1/dev/myservice/mydevice/telemetry
 {
-	"temp1":	49.42,
-	"humi1":	42,
-	"light1":	242,
-	"ts":	1517191824
+	"temp1":	37.74,
+	"humi1":	44,
+	"light1":	224,
+	"ts":	1518142526
+}
+[2018-02-09 02:20:10] [MA/MA.c] [101] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
+[2018-02-09 02:20:10] [MA/MA.c] [108] [INFO]: payload : {"serviceName":"myservice","deviceName":"mydevice","cmdId":-9999,"cmd":"jsonRpc","rpcReq":{"jsonrpc":"2.0","method":"tp_fwupgrade","params":["http://xxx.xxx.xxx.xxx:80/portal/services/myservice/firmwares/5/5d213e39-01c1-4697-9dd1-5f58f694bd4e/download","http://xxx.xxx.xxx.xxx:80/portal/firmware-upgrade-devices/5/5d213e39-01c1-4697-9dd1-5f58f694bd4e","mydevice","mydevice"],"id":1007162285}}
+[2018-02-09 02:20:10] [MA/MA.c] [173] [INFO]: RPC_FIRMWARE_UPGRADE
+[2018-02-09 02:20:10] [src/simple/Simple.c] [217] [INFO]: tpSimpleResult
+topic : v1/dev/myservice/mydevice/up
+{
+	"cmd":	"jsonRpc",
+	"cmdId":	1,
+	"result":	"success",
+	"rpcRsp":	{
+		"jsonrpc":	"2.0",
+		"id":	1007162285,
+		"result":	{
+			"status":	"SUCCESS"
+		}
+	}
+}
+[2018-02-09 02:20:10] [MA/MA.c] [101] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
+[2018-02-09 02:20:10] [MA/MA.c] [108] [INFO]: payload : {"serviceName":"myservice","deviceName":"mydevice","cmdId":-9999,"cmd":"jsonRpc","rpcReq":{"jsonrpc":"2.0","method":"tp_fwupgrade","params":["http://xxx.xxx.xxx.xxx:80/portal/services/myservice/firmwares/5/5d213e39-01c1-4697-9dd1-5f58f694bd4e/download","http://xxx.xxx.xxx.xxx:80/portal/firmware-upgrade-devices/6/5d213e39-01c1-4697-9dd1-5f58f694bd4e","mydevice","mydevice"],"id":1007162286}}
+[2018-02-09 02:20:10] [MA/MA.c] [173] [INFO]: RPC_FIRMWARE_UPGRADE
+[2018-02-09 02:20:10] [src/simple/Simple.c] [217] [INFO]: tpSimpleResult
+topic : v1/dev/myservice/mydevice/up
+{
+	"cmd":	"jsonRpc",
+	"cmdId":	1,
+	"result":	"success",
+	"rpcRsp":	{
+		"jsonrpc":	"2.0",
+		"id":	1007162286,
+		"result":	{
+			"status":	"SUCCESS"
+		}
+	}
+}
+[2018-02-09 02:20:16] [src/simple/Simple.c] [129] [INFO]: tpSimpleTelemetry
+topic : v1/dev/myservice/mydevice/telemetry
+{
+	"temp1":	25.34,
+	"humi1":	44,
+	"light1":	234,
+	"ts":	1518142816
 }

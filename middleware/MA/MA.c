@@ -160,9 +160,9 @@ void MQTTMessageArrived(char* topic, char* msg, int msgLen) {
             // TODO SOFTWARE REINSTALL
             SKTDebugPrint(LOG_LEVEL_INFO, "RPC_SOFTWARE_REINSTALL");
             
-        } else if(strncmp(method, RPC_SOFTWARE_REUNINSTALL, strlen(RPC_SOFTWARE_REUNINSTALL)) == 0) {
-            // TODO SOFTWARE REUNINSTALL
-            SKTDebugPrint(LOG_LEVEL_INFO, "RPC_SOFTWARE_REUNINSTALL");
+        } else if(strncmp(method, RPC_SOFTWARE_UNINSTALL, strlen(RPC_SOFTWARE_UNINSTALL)) == 0) {
+            // TODO SOFTWARE UNINSTALL
+            SKTDebugPrint(LOG_LEVEL_INFO, "RPC_SOFTWARE_UNINSTALL");
             
         } else if(strncmp(method, RPC_SOFTWARE_UPDATE, strlen(RPC_SOFTWARE_UPDATE)) == 0) {
             // TODO SOFTWARE UPDATE
@@ -226,6 +226,15 @@ void MQTTMessageArrived(char* topic, char* msg, int msgLen) {
                 free(resultArray);
             }
         } else {
+            ArrayElement* resultArray = calloc(1, sizeof(ArrayElement));
+            resultArray->capacity = 1;
+            resultArray->element = calloc(1, sizeof(Element) * resultArray->capacity);
+            Element* item = resultArray->element + resultArray->total;
+            item->type = JSON_TYPE_STRING;
+            item->name = "status";
+            item->value = "SUCCESS";
+            resultArray->total++;
+            rsp.resultArray = resultArray;
             tpSimpleResult(&rsp);
         }
                 
