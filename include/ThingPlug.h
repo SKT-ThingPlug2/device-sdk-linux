@@ -50,7 +50,7 @@ int tpMQTTSetCallbacks(tpMQTTConnectedCallback* cc, tpMQTTSubscribedCallback* sc
     tpMQTTConnectionLostCallback* clc, tpMQTTMessageDeliveredCallback* mdc, tpMQTTMessageArrivedCallback* mac);
 
 int tpSDKCreate(char* host, int port, int keepalive, char* userName, char* password, int enableServerCertAuth, 
-    char* subscribeTopic[], int subscribeTopicSize, char* publishTopic, char* clientID);
+    char* subscribeTopic[], int subscribeTopicSize, char* publishTopic, char* clientID, int cleanSession);
 
 int tpMQTTIsConnected();
 
