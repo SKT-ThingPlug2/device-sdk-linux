@@ -15,7 +15,7 @@
 #define MQTT_PORT                           1883
 #define MQTT_SECURE_PORT                    8883
 #define MQTT_KEEP_ALIVE                     120
-#define MQTT_CLEAN_SESSION                  0
+#define MQTT_CLEAN_SESSION                  1
 #define MQTT_ENABLE_SERVER_CERT_AUTH        0
 
 #define JSON_FORMAT
