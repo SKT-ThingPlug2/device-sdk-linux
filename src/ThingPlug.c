@@ -43,9 +43,9 @@ int tpMQTTSetCallbacks(tpMQTTConnectedCallback* cc, tpMQTTSubscribedCallback* sc
  * @return the return code of the connection response
  */
 int tpSDKCreate(char* host, int port, int keepalive, char* userName, char* password,
-        int enableServerCertAuth, char* subscribeTopic[], int subscribeTopicSize, char* publishTopic, char* clientID) {
+        int enableServerCertAuth, char* subscribeTopic[], int subscribeTopicSize, char* publishTopic, char* clientID, int cleanSession) {
     int rc = MQTTAsyncCreate(host, port, keepalive, userName, password, enableServerCertAuth, 
-        subscribeTopic, subscribeTopicSize, publishTopic, NULL, 1, clientID);
+        subscribeTopic, subscribeTopicSize, publishTopic, NULL, cleanSession, clientID);
     return rc;
 }
 
