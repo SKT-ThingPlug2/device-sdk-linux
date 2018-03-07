@@ -49,6 +49,10 @@ void SKTtpDebugLogLevelString(LOG_LEVEL_E level, char *buffer)
 			memcpy(buffer, "ERROR", strlen("ERROR"));
 		}
 		break;
+		case LOG_LEVEL_ATCOM: {
+			memcpy(buffer, "ATCOM", strlen("ATCOM"));
+		}
+		break;
 		default: {
 			memcpy(buffer, "NONE", strlen("NONE"));
 		}

@@ -1,0 +1,105 @@
+root@sptek-beaglebone:~/share/ver2.0/ManagementAgent/source/oneM2M/middleware# output/ThingPlug_Simple_SDK
+[2018-01-15 10:09:58] [MA/MA.c] [616] [INFO]: ThingPlug_Simple_SDK
+[2018-01-15 10:09:58] [MA/MA.c] [624] [ATCOM]: AT+SKTPCON=1,MQTTS,ssl://xxx.xx.xxx.xxx,8883,120,simple_v1,devicetoken,myservice,mydevice
+[2018-01-15 10:09:58] [src/net/MQTTClient.c] [341] [INFO]: MQTTAsyncDestroy()
+[2018-01-15 10:09:58] [MA/MA.c] [588] [INFO]: tpMQTTSetCallbacks result : 0
+[2018-01-15 10:09:58] [src/simple/Simple.c] [276] [INFO]: tpSimpleInitialize
+serviceID : myservice, deviceID: mydevice
+[2018-01-15 10:09:58] [MA/MA.c] [591] [INFO]: tpSimpleInitialize : 0
+[2018-01-15 10:09:58] [MA/MA.c] [596] [INFO]: client id : mydevice_78A504F515A4
+[2018-01-15 10:09:58] [src/net/MQTTClient.c] [162] [INFO]: MQTTAsyncCreate()
+[2018-01-15 10:09:58] [MA/MA.c] [611] [INFO]: tpSDKCreate result : 0
+[2018-01-15 10:09:58] [MA/MA.c] [626] [ATCOM]: OK
+[2018-01-15 10:09:58] [MA/MA.c] [82] [INFO]: MQTTConnected result : 0
+[2018-01-15 10:09:58] [MA/MA.c] [89] [INFO]: CONNECTION_STATUS : 2
+[2018-01-15 10:09:58] [MA/MA.c] [91] [ATCOM]: +SKTPCON=0
+[2018-01-15 10:09:58] [src/net/MQTTClient.c] [54] [INFO]: subscribed topic : v1/dev/myservice/mydevice/down
+[2018-01-15 10:09:58] [src/net/MQTTClient.c] [66] [INFO]: on connected : connect onSuccess called
+[2018-01-15 10:09:58] [MA/MA.c] [95] [INFO]: MQTTSubscribed result : 0
+[2018-01-15 10:09:58] [MA/MA.c] [104] [ATCOM]: AT+SKTPDAT=1,attribute,1,340176896,2.0.0,1.0,710DJC5I10000290,0,ethernet,192.168.0.4,xxx.xx.xxx.xxx,35.1689766,129.1338524,0
+[2018-01-15 10:09:58] [src/simple/Simple.c] [345] [INFO]: tpSimpleRawAttribute
+topic : v1/dev/myservice/mydevice/attribute/csv
+340176896,2.0.0,1.0,710DJC5I10000290,0,ethernet,192.168.0.4,xxx.xx.xxx.xxx,35.1689766,129.1338524,0
+[2018-01-15 10:09:58] [MA/MA.c] [423] [ATCOM]: OK
+[2018-01-15 10:10:08] [MA/MA.c] [636] [ATCOM]: AT+SKTPDAT=1,telemetry,1,1515978608,45.74,44,224
+[2018-01-15 10:10:08] [src/simple/Simple.c] [310] [INFO]: tpSimpleRawTelemetry
+topic : v1/dev/myservice/mydevice/telemetry/csv
+1515978608,45.74,44,224
+[2018-01-15 10:10:08] [MA/MA.c] [423] [ATCOM]: OK
+[2018-01-15 10:10:08] [MA/MA.c] [639] [ATCOM]: AT+SKTPERR=1
+[2018-01-15 10:10:08] [MA/MA.c] [641] [ATCOM]: result : +SKTPE:0
+[2018-01-15 10:10:09] [MA/MA.c] [133] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
+[2018-01-15 10:10:09] [MA/MA.c] [140] [INFO]: payload : {"serviceName":"myservice","deviceName":"mydevice","cmdId":7,"cmd":"jsonRpc","rpcMode":"oneway","rpcReq":{"jsonrpc":"2.0","method":"tp_user","params":[{"act7colorLed":0}],"id":1501442265}}
+[2018-01-15 10:10:09] [MA/MA.c] [237] [INFO]: RPC_USER
+[2018-01-15 10:10:09] [MA/MA.c] [243] [ATCOM]: +SKTPCMD=tp_user,1501442265,3,[{"act7colorLed":0}]
+[2018-01-15 10:10:09] [MA/MA.c] [252] [INFO]:
+rpc : 2.0,
+id : 1501442265,
+cmd : 0
+[2018-01-15 10:10:09] [src/simple/Simple.c] [365] [INFO]: tpSimpleRawResult
+topic : v1/dev/myservice/mydevice/up
+{"cmd":"jsonRpc","cmdId":1,"result":"success","rpcRsp":{"jsonrpc":"2.0","id":1501442265,"result":{"act7colorLed":0}}}
+[2018-01-15 10:10:09] [MA/MA.c] [287] [ATCOM]: OK
+[2018-01-15 10:10:12] [MA/MA.c] [133] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
+[2018-01-15 10:10:12] [MA/MA.c] [140] [INFO]: payload : {"serviceName":"myservice","deviceName":"mydevice","cmdId":8,"cmd":"jsonRpc","rpcMode":"twoway","rpcReq":{"jsonrpc":"2.0","method":"tp_user","params":[{"act7colorLed":1}],"id":1501442266}}
+[2018-01-15 10:10:12] [MA/MA.c] [237] [INFO]: RPC_USER
+[2018-01-15 10:10:12] [MA/MA.c] [241] [ATCOM]: +SKTPCMD=tp_user,1501442266,1,[{"act7colorLed":1}]
+[2018-01-15 10:10:12] [MA/MA.c] [252] [INFO]:
+rpc : 2.0,
+id : 1501442266,
+cmd : 1
+[2018-01-15 10:10:12] [MA/MA.c] [271] [ATCOM]: AT+SKTPRES=1,1501442266,0,{"act7colorLed":1}
+[2018-01-15 10:10:12] [src/simple/Simple.c] [365] [INFO]: tpSimpleRawResult
+topic : v1/dev/myservice/mydevice/up
+{"cmd":"jsonRpc","cmdId":1,"result":"success","rpcRsp":{"jsonrpc":"2.0","id":1501442266,"result":{"act7colorLed":1}}}
+[2018-01-15 10:10:12] [MA/MA.c] [287] [ATCOM]: OK
+[2018-01-15 10:10:12] [MA/MA.c] [291] [ATCOM]: +SKTPCMD=tp_user,1501442266,3
+[2018-01-15 10:10:18] [MA/MA.c] [636] [ATCOM]: AT+SKTPDAT=1,telemetry,1,1515978618,21.10,40,210
+[2018-01-15 10:10:18] [src/simple/Simple.c] [310] [INFO]: tpSimpleRawTelemetry
+topic : v1/dev/myservice/mydevice/telemetry/csv
+1515978618,21.10,40,210
+[2018-01-15 10:10:18] [MA/MA.c] [423] [ATCOM]: OK
+[2018-01-15 10:10:18] [MA/MA.c] [639] [ATCOM]: AT+SKTPERR=1
+[2018-01-15 10:10:18] [MA/MA.c] [641] [ATCOM]: result : +SKTPE:0
+[2018-01-15 10:10:24] [MA/MA.c] [133] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
+[2018-01-15 10:10:24] [MA/MA.c] [140] [INFO]: payload : {"serviceName":"myservice","deviceName":"mydevice","cmdId":-9999,"cmd":"jsonRpc","rpcMode":"oneway","rpcReq":{"jsonrpc":"2.0","method":"tp_remote","params":["AT+CPSMS=1,,,01000001,00100011"],"id":1501442267}}
+[2018-01-15 10:10:24] [MA/MA.c] [223] [INFO]: RPC_REMOTE
+[2018-01-15 10:10:24] [MA/MA.c] [226] [ATCOM]: +SKTPCMD=tp_remote,1501442267,1,["AT+CPSMS=1,,,01000001,00100011"]
+[2018-01-15 10:10:28] [MA/MA.c] [636] [ATCOM]: AT+SKTPDAT=1,telemetry,1,1515978628,66.47,47,247
+[2018-01-15 10:10:28] [src/simple/Simple.c] [310] [INFO]: tpSimpleRawTelemetry
+topic : v1/dev/myservice/mydevice/telemetry/csv
+1515978628,66.47,47,247
+[2018-01-15 10:10:28] [MA/MA.c] [423] [ATCOM]: OK
+[2018-01-15 10:10:28] [MA/MA.c] [639] [ATCOM]: AT+SKTPERR=1
+[2018-01-15 10:10:28] [MA/MA.c] [641] [ATCOM]: result : +SKTPE:0
+[2018-01-15 10:10:31] [MA/MA.c] [133] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
+[2018-01-15 10:10:31] [MA/MA.c] [140] [INFO]: payload : {"serviceName":"myservice","deviceName":"mydevice","cmdId":-9999,"cmd":"jsonRpc","rpcMode":"twoway","rpcReq":{"jsonrpc":"2.0","method":"tp_remote","params":["AT+CPSMS=1,,,01000001,00100011"],"id":1501442268}}
+[2018-01-15 10:10:31] [MA/MA.c] [223] [INFO]: RPC_REMOTE
+[2018-01-15 10:10:31] [MA/MA.c] [226] [ATCOM]: +SKTPCMD=tp_remote,1501442268,1,["AT+CPSMS=1,,,01000001,00100011"]
+[2018-01-15 10:10:31] [MA/MA.c] [233] [ATCOM]: +SKTPCMD=tp_remote,1501442268,3
+[2018-01-15 10:10:34] [MA/MA.c] [133] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
+[2018-01-15 10:10:34] [MA/MA.c] [140] [INFO]: payload : {"deviceId":"82ba8a40-f735-11e7-8ba2-6f996b68699e","cmdId":1917090228,"cmd":"setAttribute","attribute":{"act7colorLed":0}}
+[2018-01-15 10:10:34] [MA/MA.c] [307] [ATCOM]: +SKTPCMD=set_attr,1917090228,3,{"act7colorLed":0}
+[2018-01-15 10:10:34] [MA/MA.c] [313] [INFO]: act7colorLed : 0, 1917090228
+[2018-01-15 10:10:34] [src/simple/Simple.c] [345] [INFO]: tpSimpleRawAttribute
+topic : v1/dev/myservice/mydevice/attribute/csv
+,,,,,,,,,,0
+[2018-01-15 10:10:38] [MA/MA.c] [636] [ATCOM]: AT+SKTPDAT=1,telemetry,1,1515978638,34.73,43,223
+[2018-01-15 10:10:38] [src/simple/Simple.c] [310] [INFO]: tpSimpleRawTelemetry
+topic : v1/dev/myservice/mydevice/telemetry/csv
+1515978638,34.73,43,223
+[2018-01-15 10:10:38] [MA/MA.c] [423] [ATCOM]: OK
+[2018-01-15 10:10:38] [MA/MA.c] [639] [ATCOM]: AT+SKTPERR=1
+[2018-01-15 10:10:38] [MA/MA.c] [641] [ATCOM]: result : +SKTPE:0
+[2018-01-15 10:10:43] [MA/MA.c] [133] [INFO]: MQTTMessageArrived topic : v1/dev/myservice/mydevice/down, step : 2
+[2018-01-15 10:10:43] [MA/MA.c] [140] [INFO]: payload : {"serviceName":"myservice","deviceName":"mydevice","cmdId":-9999,"cmd":"jsonRpc","rpcMode":"twoway","rpcReq":{"jsonrpc":"2.0","method":"tp_fwupgrade","params":["http://xxx.xx.xxx.xxx:80/portal/services/myservice/firmwares/7/ebb28bde-5b6d-4920-8fb2-e4cd93d3751e/download","http://xxx.xx.xxx.xxx:80/portal/firmware-upgrade-devices/11/ebb28bde-5b6d-4920-8fb2-e4cd93d3751e"],"id":1501442269}}
+[2018-01-15 10:10:43] [MA/MA.c] [201] [INFO]: RPC_FIRMWARE_UPGRADE
+[2018-01-15 10:10:43] [MA/MA.c] [204] [ATCOM]: +SKTPCMD=tp_fwupgrade,1501442269,1,["http://xxx.xx.xxx.xxx:80/portal/services/myservice/firmwares/7/ebb28bde-5b6d-4920-8fb2-e4cd93d3751e/download","http://xxx.xx.xxx.xxx:80/portal/firmware-upgrade-devices/11/ebb28bde-5b6d-4920-8fb2-e4cd93d3751e"]
+[2018-01-15 10:10:43] [MA/MA.c] [211] [ATCOM]: +SKTPCMD=tp_fwupgrade,1501442269,3
+[2018-01-15 10:10:48] [MA/MA.c] [636] [ATCOM]: AT+SKTPDAT=1,telemetry,1,1515978648,27.03,43,203
+[2018-01-15 10:10:48] [src/simple/Simple.c] [310] [INFO]: tpSimpleRawTelemetry
+topic : v1/dev/myservice/mydevice/telemetry/csv
+1515978648,27.03,43,203
+[2018-01-15 10:10:48] [MA/MA.c] [423] [ATCOM]: OK
+[2018-01-15 10:10:48] [MA/MA.c] [639] [ATCOM]: AT+SKTPERR=1
+[2018-01-15 10:10:48] [MA/MA.c] [641] [ATCOM]: result : +SKTPE:0
