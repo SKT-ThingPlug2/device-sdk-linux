@@ -132,3 +132,6 @@ ThingPlug_Simple_SDK 실행
 2. Thingplug SensorData
 ---
 ![MbedTP.png](images/linuxTP.png)
+
+Copyright (c) 2018 SK telecom Co., Ltd. All Rights Reserved.
+Distributed under Apache License Version 2.0. See LICENSE for details.
