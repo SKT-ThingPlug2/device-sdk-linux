@@ -32,7 +32,7 @@ MQTT broker 와의 연결을 위한 정보 및 디바이스 정보를 설정해�
 #define MQTT_PORT                           1883
 #define MQTT_SECURE_PORT                    8883						
 #define MQTT_KEEP_ALIVE                     120
-#define MQTT_ENABLE_SERVER_CERT_AUTH        0
+#define MQTT_ENABLE_SERVER_CERT_AUTH        1
 #define SIMPLE_DEVICE_TOKEN                 ""
 #define SIMPLE_SERVICE_NAME                 ""
 #define SIMPLE_DEVICE_NAME                  ""
