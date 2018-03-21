@@ -615,10 +615,11 @@ void start() {
 int MARun() {
     SKTDebugInit(1, LOG_LEVEL_INFO, NULL);
 	SKTDebugPrint(LOG_LEVEL_INFO, "ThingPlug_Simple_SDK");
-    SKTDebugPrint(LOG_LEVEL_ATCOM, "AT+SKTPCON=1,MQTTS,%s,%d,%d,simple_v1,%s,%s,%s", 
+    SKTDebugPrint(LOG_LEVEL_ATCOM, "AT+SKTPCON=1,MQTTS,%s,%d,%d,%d,simple_v1,%s,%s,%s", 
         MQTT_SECURE_HOST, 
         MQTT_SECURE_PORT,
         MQTT_KEEP_ALIVE,
+        MQTT_CLEAN_SESSION,
         SIMPLE_DEVICE_TOKEN,
         SIMPLE_SERVICE_NAME,
         SIMPLE_DEVICE_NAME
