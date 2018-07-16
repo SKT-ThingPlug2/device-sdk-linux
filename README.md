@@ -18,7 +18,8 @@ Library
 라이브러리 | 용도 | 홈페이지
 ------------ | ------------- | -------------
 __cJSON__ | JSON parser | [cJSON Homepage](https://github.com/DaveGamble/cJSON)
-__paho__ | MQTT | [paho Homepage](https://eclipse.org/paho/)
+__paho__ | MQTT | [paho Homepage](https://github.com/eclipse/paho.mqtt.c/tree/v1.2.0)
+__openssl__ | OpenSSL | [openssl Homepage](https://github.com/openssl/openssl/tree/OpenSSL_1_0_2-stable)
 
 Sample build
 ===
